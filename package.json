@@ -4,6 +4,10 @@
   "description": "Vue component for Slideout.js",
   "author": "Vouill <vouillon.thibaud@gmail.com>",
   "main": "/lib/vue-slideout.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vouill/vue-slideout"
+  },
   "scripts": {
     "dev": "node build/dev-server.js",
     "build:docs": "node build/build.js",
