@@ -1,6 +1,6 @@
 {
   "name": "vue-slideout",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Vue component for Slideout.js",
   "author": "Vouill <vouillon.thibaud@gmail.com>",
   "main": "/lib/vue-slideout.js",
