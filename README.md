@@ -92,10 +92,12 @@ This component is a simple vue implementation of [Slideout.js](https://github.co
 </style>
 ```
 
-Every Slideout options are implemented as simple props, default values are kept same as original.
-However the panel and menu selector needs to be specified as id ('#id') or class ('.class')
-Notice the addition of a binded prop `:toggleSelectors="[]"`, it's an array containing any selectors you wish to be listened to triger the slideout action on 'click'.
+* Every Slideout options are implemented as simple props, default values are kept same as original.
 
-## Coming next
+ However the panel and menu selector needs to be specified as id ('#id') or class ('.class').
+
+* Notice the addition of a binded prop `:toggleSelectors="[]"`, it's an array containing any selectors you wish to be listened to triger the slideout action on 'click'.
+
+## Coming up next
 
 [Events and actions](https://github.com/Mango/slideout#user-content-slideoutopen) implementation
