@@ -2,7 +2,6 @@
 
 This component is a simple vue implementation of [Slideout.js](https://github.com/Mango/slideout)
 
-[Demo](https://vouill.github.io/vue-slideout/)
 
 ## Install
 
