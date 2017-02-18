@@ -15,7 +15,7 @@ This component is a simple vue implementation of [Slideout.js](https://github.co
 ```html
 <template>
   <div id="app">
-    <Slideout menu="#menu" panel="#panel" :toggleSelectors="['.toggle-button']">
+    <Slideout menu="#menu" panel="#panel" :toggleSelectors="['.toggle-button']" @on-open="open">
       <nav id="menu">
               <div>Menu</div>
             </nav>
@@ -38,6 +38,10 @@ This component is a simple vue implementation of [Slideout.js](https://github.co
     name: 'app',
     components: {
       Slideout
+    },
+    methods: {
+    open: function () {
+      console.log('slideoutOpen')
     }
   }
 </script>
@@ -92,12 +96,45 @@ This component is a simple vue implementation of [Slideout.js](https://github.co
 </style>
 ```
 
-* Every Slideout options are implemented as simple props, default values are kept same as original.
+# Component API
 
- However the panel and menu selector needs to be specified as id ('#id') or class ('.class').
+## Data props
+The component Props follows the [Slideout options](https://github.com/Mango/slideout#user-content-slideoutoptions)
 
-* Notice the addition of a binded prop `:toggleSelectors="[]"`, it's an array containing any selectors you wish to be listened to triger the slideout action on 'click'.
+```html
 
-## Coming up next
+<Slideout
+panel="selector"
+padding="number"
+side="str"
+>
+</Slideout>
+```
 
-[Events and actions](https://github.com/Mango/slideout#user-content-slideoutopen) implementation
+- `panel="selector"` (String)  - Selector of the panel HTML Element. Default `#panel`.
+- `menu="menu"` (String)  - Selector of the menu HTML Element. Default `#menu`.
+- `menu="duration"` (String)  - (Number) - The time (milliseconds) to open/close the slideout. Default: `300`.
+...
+
+## Events
+The component Events follows [Slideout events](https://github.com/Mango/slideout#user-content-events)
+
+
+```html
+<Slideout
+@on-open="method"
+@once-open="method">
+</Slideout>
+```
+
+...
+
+## Access the Slideout object from a parent Component
+
+You can use `this.$children[0].slideout`
+
+
+`this.$children[0].slideout.open()`
+
+`this.$children[0].slideout.toggle()`
+

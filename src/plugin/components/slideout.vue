@@ -10,7 +10,9 @@
   import Slideout from 'slideout'
   export default {
     data () {
-      return {}
+      return {
+        slideout: null
+      }
     },
     props: {
       panel: { default: '#panel' },
@@ -20,24 +22,36 @@
       touch: { default: true },
       easing: { default: 'ease' },
       side: { default: 'left' },
-      toggleSelectors: { default: function () {
-        return []
-      } }
+      duration: { default: 300 },
+      toggleSelectors: {
+        default: function () {
+          return []
+        }
+      }
     },
     mounted: function () {
-      var slideout = new Slideout({
+      this.slideout = new Slideout({
         'panel': document.querySelector(this.panel),
         'menu': document.querySelector(this.menu),
         'padding': this.padding,
         'tolerance': this.tolerance,
         'touch': this.touch,
         'easing': this.easing,
-        'side': this.side
+        'side': this.side,
+        'duration': this.duration
       })
-      console.log(this.toggleSelectors)
       this.toggleSelectors.forEach(selector => {
-        document.querySelector(selector).addEventListener('click', function () {
-          slideout.toggle()
+        document.querySelector(selector).addEventListener('click', () => {
+          this.slideout.toggle()
+        })
+      })
+      const events = ['beforeclose', 'close', 'beforeopen', 'open', 'translatestart', 'translate', 'translateend']
+      events.forEach(event => {
+        this.slideout.on(event, () => {
+          this.$emit('on-' + event, event)
+        })
+        this.slideout.once(event, () => {
+          this.$emit('once-' + event, event)
         })
       })
     }

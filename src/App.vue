@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Slideout :toggleSelectors="['.toggle-button']">
+    <Slideout :toggleSelectors="['.toggle-button']" @on-open="logger">
       <Hello/>
     </Slideout>
   </div>
@@ -15,6 +15,14 @@
     components: {
       Hello,
       Slideout
+    },
+    mounted: function () {
+      console.log(this.$children[0].slideout.isOpen())
+    },
+    methods: {
+      logger: function () {
+        console.log('open event')
+      }
     }
   }
 </script>
