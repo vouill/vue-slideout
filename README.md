@@ -12,6 +12,8 @@ This component is a simple vue implementation of [Slideout.js](https://github.co
 
 ## Usage
 
+`App.vue`
+
 ```html
 <template>
   <div id="app">
@@ -132,10 +134,14 @@ The component Events follows [Slideout events](https://github.com/Mango/slideout
 
 ## Access the Slideout object from a parent Component
 
-You can use `this.$children[0].slideout`
+You can access the `slideout` object: `this.$children[i].slideout`
 
+Example:
 
-`this.$children[0].slideout.open()`
-
-`this.$children[0].slideout.toggle()`
+```javascript
+  methods: {
+    somethingClicked: function () {
+      this.$children[0].slideout.toggle()
+    }
+```
 
