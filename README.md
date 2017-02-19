@@ -114,6 +114,7 @@ side="str"
 - `panel="selector"` (String)  - Selector of the panel HTML Element. Default `#panel`.
 - `menu="menu"` (String)  - Selector of the menu HTML Element. Default `#menu`.
 - `menu="duration"` (String)  - (Number) - The time (milliseconds) to open/close the slideout. Default: `300`.
+
 ...
 
 ## Events
