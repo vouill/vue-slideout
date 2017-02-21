@@ -29,6 +29,7 @@
         }
       }
     },
+    name: "Slideout",
     mounted: function () {
       this.slideout = new Slideout({
         'panel': document.querySelector(this.panel),
