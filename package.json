@@ -1,6 +1,6 @@
 {
   "name": "vue-slideout",
-  "version": "1.4.1",
+  "version": "1.5",
   "description": "Vue component for Slideout.js",
   "author": "Vouill <vouillon.thibaud@gmail.com>",
   "main": "/lib/vue-slideout.js",
@@ -19,9 +19,9 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "slideout": "^1.0.1"
   },
   "devDependencies": {
-    "slideout": "^1.0.1",
     "vue": "^2.1.10",
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",

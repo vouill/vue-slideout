@@ -7,7 +7,9 @@
 </style>
 
 <script>
-  import Slideout from 'slideout'
+  //  import Slideout from 'slideout'
+  const Slideout = require('slideout')
+
   export default {
     data () {
       return {

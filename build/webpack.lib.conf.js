@@ -5,8 +5,7 @@ var outputFile = libraryName + '.js';
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 
-
-var config = merge(baseWebpackConfig,{
+var config = merge(baseWebpackConfig, {
   entry: path.resolve(__dirname, '../src/plugin/plugin.js'),
   devtool: 'source-map',
   output: {
@@ -15,6 +14,9 @@ var config = merge(baseWebpackConfig,{
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true
+  },
+  externals: {
+    "slideout": "slideout"
   }
 });
 
