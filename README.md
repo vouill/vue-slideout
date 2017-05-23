@@ -46,6 +46,7 @@ This component is a simple vue implementation of [Slideout.js](https://github.co
       console.log('slideoutOpen')
     }
   }
+}
 </script>
 
 <style>
