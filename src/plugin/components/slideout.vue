@@ -29,7 +29,8 @@
         default: function () {
           return []
         }
-      }
+      },
+      isOpenStatus:Boolean
     },
     name: 'Slideout',
     mounted: function () {
@@ -57,6 +58,16 @@
           this.$emit('once-' + event, event)
         })
       })
+    },
+    watch:{
+      isOpenStatus(val){
+        if(val===true){
+          this.slideout.open();
+        }else{
+          this.slideout.close();
+        }
+
+      }
     }
   }
 </script>
