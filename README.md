@@ -19,16 +19,16 @@ This component is a simple vue implementation of [Slideout.js](https://github.co
   <div id="app">
     <Slideout menu="#menu" panel="#panel" :toggleSelectors="['.toggle-button']" @on-open="open">
       <nav id="menu">
-              <div>Menu</div>
-            </nav>
-            <main id="panel">
-              <header>
-                <div>
-                  <button class="toggle-button">☰</button>
-                  Panel
-                </div>
-              </header>
-            </main>
+        <div>Menu</div>
+      </nav>
+      <main id="panel">
+        <header>
+          <div>
+            <button class="toggle-button">☰</button>
+            Panel
+          </div>
+        </header>
+      </main>
     </Slideout>
   </div>
 </template>
@@ -42,11 +42,11 @@ This component is a simple vue implementation of [Slideout.js](https://github.co
       Slideout
     },
     methods: {
-    open: function () {
-      console.log('slideoutOpen')
+      open: function () {
+        console.log('slideoutOpen')
+      }
     }
   }
-}
 </script>
 
 <style>
