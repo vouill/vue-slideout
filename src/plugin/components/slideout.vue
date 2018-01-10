@@ -50,11 +50,11 @@
       })
       const events = ['beforeclose', 'close', 'beforeopen', 'open', 'translatestart', 'translate', 'translateend']
       events.forEach(event => {
-        this.slideout.on(event, () => {
-          this.$emit('on-' + event, event)
+        this.slideout.on(event, (data) => {
+          this.$emit('on-' + event, data)
         })
-        this.slideout.once(event, () => {
-          this.$emit('once-' + event, event)
+        this.slideout.once(event, (data) => {
+          this.$emit('once-' + event, data)
         })
       })
     }

@@ -9,7 +9,7 @@
 <script>
   import Hello from './components/Hello'
 //  import Slideout from './plugin/plugin'
-  import Slideout from '../lib/vue-slideout'
+  import Slideout from './plugin/components/slideout.vue'
 
   export default {
     name: 'app',
