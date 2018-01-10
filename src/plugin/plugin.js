@@ -1,4 +1,4 @@
-import SlideoutComponent from './components/slideout.vue'
+import SlideoutComponent from './components/slideout.js'
 
 const Slideout = SlideoutComponent
 
