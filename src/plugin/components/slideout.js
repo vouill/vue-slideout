@@ -34,8 +34,10 @@ export default {
       'duration': this.duration
     })
     this.toggleSelectors.forEach(selector => {
-      document.querySelector(selector).addEventListener('click', () => {
-        this.slideout.toggle()
+      document.querySelectorAll(selector).forEach(element => {
+        element.addEventListener('click', () => {
+          this.slideout.toggle()
+        })
       })
     })
     const events = ['beforeclose', 'close', 'beforeopen', 'open', 'translatestart', 'translate', 'translateend']
